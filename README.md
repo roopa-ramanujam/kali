@@ -1,7 +1,7 @@
 # Kali
 Train with student athletes at your university.
 
-Memebers of Team:
+Team:
   Maria Rodriguez,
   Molly Steelhammer,
   Rishika Krishna,
