@@ -1,8 +1,9 @@
 
-body, html {
+body {
+    background-image:url('uo.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
     height: 100%;
-    background-repeat: no-repeat;
-    background-color:lavender;
 }
 
 .card-container.card {
@@ -19,7 +20,7 @@ body, html {
 /*
  * Card component
  */
-.card {
+ .card {
     background-color: #F7F7F7;
     /* just in case there no content*/
     padding: 20px 25px 30px;
@@ -38,8 +39,8 @@ body, html {
  * Form styles
  */
 
-.form-signin #inputEmail,
-.form-signin #inputPassword {
+ .form-signin #inputEmail,
+ .form-signin #inputPassword {
     direction: ltr;
     height: 44px;
     font-size: 16px;
@@ -73,6 +74,13 @@ body, html {
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
     cursor: pointer;
+}
+
+.btn.btn-success.btn-cardio {
+    outline-color: black
+}
+.btn.btn-warning.btn-strength {
+  outline-color:black;
 }
 
 .register {
