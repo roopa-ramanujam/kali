@@ -18,22 +18,43 @@
 </head>
 <script src="app.js"> </script>
 <body>
+<!-- <div style='position:absolute;z-index:0;left:0;top:0;width:100%;height:100%'>
+  <img src='uo.jpg' style='width:100%;height:100%' alt='[]' />
+</div> -->
     <div ng-app="myApp" ng-controller="controller">
         <div class="container">
             <div class="card card-container">
-                <form class="form-signin">
+                <form class="form-signin" data-toggle="validator" role="form">
                     <h3 id="login" align="center"> Welcome new user!</h3>
                     <br>
-                    <input ng-model="userName" type="email" id="inputEmail" class="form-control" placeholder="Email address">
-                    <input ng-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
-                    <input ng-model="athlete" type = "text" id="inputType" class="form-control" placeholder="Are you a UO athlete?">
-                    <input ng-model="weight" type="number" id="weight" class="form-control" placeholder="What is your current weight?">
+                    Email address:
+                    <input ng-model="userName" type="email" id="inputEmail" class="form-control" placeholder="username@uoregon.edu">
+                    Password:
+                    <input ng-model="password" type="password" id="inputPassword" class="form-control">
+                    
+					What is your sex? 
+                    <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="NonBinary">  Non-binary <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="Male">  Male <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="Female">  Female <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="NA">  Prefer not to answer <br>
+                    <br>
+
+					Are you a UO Athlete?
+                    <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="Yes">  Yes
+                    <br>
+                    <input ng-model="athlete" type="radio" id="inputType" class="form-check-input" value="No">  No
+					<br><br>
+					Weight:
+                    <input ng-model="weight" type="number" min="0" id="weight" class="form-control" placeholder="Weight in pounds">
+                    Height:
                     <div class="row">
                         <div class="col-sm-6">
-                            <input type="text" ng-model="feet" id="inputType" class="form-control" placeholder="Height in feet">
+                            <input type="number" min="0"ng-model="feet" id="inputType" class="form-control" placeholder="Height in feet">
                         </div>
                         <div class="col-sm-6">
-                            <input type = "text" ng-model="inches" id="inputType" class="form-control" placeholder="Height in inches">
+                            <input type = "number" min="0" ng-model="inches" id="inputType" class="form-control" placeholder="Height in inches">
                         </div>
                     </div>
                     I am interested in:
