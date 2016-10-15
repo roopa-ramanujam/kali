@@ -17,26 +17,41 @@
     
 </head>
 <script src="app.js"> </script>
-<body style="background-color:#154733">
-    <div class="container">
-        <div class="card card-container">
-            <form class="form-signin">
-                <h3 id="login" align="center"> Welcome new user!</h3>
-                <br>
-                <input ng-model="userName" type="email" id="inputEmail" class="form-control" placeholder="Email address">
-                <input ng-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
-                <input ng-model="athlete" type = "text" id="inputType" class="form-control" placeholder="Are you a UO athlete?">
-                <input ng-model="weight" type="number" id="weight" class="form-control" placeholder="What is your current weight?">
-                <input type = "text" id="inputType" class="form-control" placeholder="Select your height from the dropdown">
-                <select> <option ng-repeat="height in heightInFeet">{{height}}</option></select>            
-                <select> <option ng-repeat="height in heightInInches">{{height}}</option></select>   
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="alert()">Register now!
-                </button>
-
-            </form><!-- /form -->
-        </div><!-- /card-container -->
-    </div><!-- /container -->
-
+<body>
+    <div ng-app="myApp" ng-controller="controller">
+        <div class="container">
+            <div class="card card-container">
+                <form class="form-signin">
+                    <h3 id="login" align="center"> Welcome new user!</h3>
+                    <br>
+                    <input ng-model="userName" type="email" id="inputEmail" class="form-control" placeholder="Email address">
+                    <input ng-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+                    <input ng-model="athlete" type = "text" id="inputType" class="form-control" placeholder="Are you a UO athlete?">
+                    <input ng-model="weight" type="number" id="weight" class="form-control" placeholder="What is your current weight?">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" ng-model="feet" id="inputType" class="form-control" placeholder="Height in feet">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type = "text" ng-model="inches" id="inputType" class="form-control" placeholder="Height in inches">
+                        </div>
+                    </div>
+                    I am interested in:
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button class="btn btn-success btn-cardio" data-toggle="button" aria-pressed="false"  type="submit"> Cardio </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-warning btn-strength" data-toggle="button" aria-pressed="false" type="submit">Strength Training
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="weightAlert()">Register now!
+                    </button>
+                </form><!-- /form -->
+            </div><!-- /card-container -->
+        </div><!-- /container -->
+    </div>
 </body>
 </html>
 
