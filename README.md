@@ -1,4 +1,4 @@
-# kali
+# Kali
 Train with student athletes at your university.
 
 Memebers of Team:
