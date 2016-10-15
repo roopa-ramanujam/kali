@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Sign up Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="jquery-1.12.4.min.js"></script> -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+</head>
+<script src="app.js"> </script>
+<body style="background-color:#154733">
+    <div class="container">
+        <div class="card card-container">
+            <form class="form-signin">
+                <h3 id="login" align="center"> Welcome new user!</h3>
+                <br>
+                <input ng-model="userName" type="email" id="inputEmail" class="form-control" placeholder="Email address">
+                <input ng-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password">
+                <input ng-model="athlete" type = "text" id="inputType" class="form-control" placeholder="Are you a UO athlete?">
+                <input ng-model="weight" type="number" id="weight" class="form-control" placeholder="What is your current weight?">
+                <input type = "text" id="inputType" class="form-control" placeholder="Select your height from the dropdown">
+                <select> <option ng-repeat="height in heightInFeet">{{height}}</option></select>            
+                <select> <option ng-repeat="height in heightInInches">{{height}}</option></select>   
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="alert()">Register now!
+                </button>
+
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+</body>
+</html>
+
+
+user - userid, type (athlete or not)
+stats- statsid, userid, weight, height, goal, bmi, routine
+routine links to cardio or strength
