@@ -20,15 +20,15 @@
 
 <body>
 	<img src="Kali.png" class="logo"/>
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="background">
-				<button type="button" id="countButton" class="btn btn-default">Continue</button>
-			</div>
+	<div id="wrapper" vertical-align="middle" align="center">
+		<div class="bubble">
+			<div id="chatbot"> </div>
 		</div>
 	</div>
-	<div id="chatbot">
-		hoyt </div>
+	<div id="background" vertical-align="middle" align="center">
+		<button type="button" id="countButton" class="btn btn-success btn-cardio">Continue</button>
+		<button type="button" id="countButton" class="btn btn-success btn-cardio" onclick="back()">Back to Cherish's workouts</button>
+	</div>
 
 	<script type="text/javascript">
 		var workout = {0: "Hi, I'm Cherish Burks, welcome to my workout! Are you ready to begin?", 
@@ -48,12 +48,12 @@
 
 		var count = 0;
 		var button = document.getElementById("countButton");
-		document.getElementById("chatbot").innerHTML = "<h1>" + workout[0] + "</h1>";
+		document.getElementById("chatbot").innerHTML = "<h3>" + workout[0] + "</h3>";
 		button.onclick = function(){
 			count++;
 			if (count >= 13) {
-				document.getElementById("chatbot").innerHTML = "<h1> Congratulations! All done </h1>";
-				document.getElementById("chatbot").innerHTML = "<h1></h1>";
+				document.getElementById("chatbot").innerHTML = "<h3> Congratulations! All done </h3?";
+				document.getElementById("chatbot").innerHTML = "<h3> </h3>";
 				return;
 			}
 			else {
@@ -61,8 +61,11 @@
 			}
 		}
 		function next (workout, count) {
-			document.getElementById("chatbot").innerHTML = "<h1>" + workout[count] + "</h1>";
+			document.getElementById("chatbot").innerHTML = "<h3>" + workout[count] + "</h3>";
 		}
+		function back(){
+                        location.href="workout.html";
+                    }
 			// var xmlhttp = new XMLHttpRequest();
 			// var url = "https://1cnsncaze3.execute-api.us-west-2.amazonaws.com/FINAL/getworkout";
 			// xmlhttp.open("GET", url, true);
@@ -76,6 +79,8 @@
 	  //   }
 
 	  //   alert(workout);
+
+
 
 	</script>
 
