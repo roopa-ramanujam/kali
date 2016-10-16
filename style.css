@@ -27,6 +27,11 @@ body {
     cursor: default;
 }
 
+#updates {
+    max-height: 500px;
+    height: 500px;
+    overflow-y: scroll;
+}
 
 h3 {
 	margin: 0px;
@@ -34,6 +39,12 @@ h3 {
 
 h4 {
     margin: 0px;
+    color: white;
+}
+
+#name_date {
+    font-size: 75%;
+    color: darkseagreen;
 }
 /*
  * Card component
@@ -117,6 +128,19 @@ h4 {
     border-radius: 50%;
 }
 
+.img-student {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.table.table-hover {
+    background-color: white;
+}
+
+.navbar {
+    height: 75px;
+}
+
 .img-sm {
     width: 50px;
     height: 50px;
@@ -128,9 +152,16 @@ h4 {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 150px;
-    width: 150px;
+    height: 75px;
+    width: 90px;
     border: none;
+}
+
+.glyphicon.glyphicon-menu-hamburger {
+    color: white;
+    float: right;
+    margin-right: 10px;
+    
 }
 
 .register:hover,
@@ -141,4 +172,64 @@ h4 {
 .form-signin #login {
 	display: block;
     margin-bottom: 10px;
+}
+
+.search-form .form-group {
+  float: right;
+  vertical-align: middle;
+  transition: all 0.35s, border-radius 0s;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  vertical-align: middle;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+    vertical-align: middle;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+    vertical-align: middle;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+    vertical-align: middle;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+    vertical-align: middle;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 50%;
+    vertical-align: middle;
+  border-radius: 4px 25px 25px 4px;
+    vertical-align: middle;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+    vertical-align: middle;
+  top: -1px;
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  left: initial;
+  font-size: 14px;
 }
