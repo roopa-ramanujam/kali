@@ -22,6 +22,7 @@
   <img src='uo.jpg' style='width:100%;height:100%' alt='[]' />
 </div> -->
     <div ng-app="myApp" ng-controller="controller">
+        
         <div class="container">
             <div class="card card-container">
                 <form class="form-signin" data-toggle="validator" role="form">
@@ -68,14 +69,34 @@
                         </div>
                     </div>
                     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register now!</button>
+                            <button class="btn btn-success btn-cardio" data-toggle="button" aria-pressed="false"  type="submit" onclick="c_click()"> Cardio </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-warning btn-strength" data-toggle="button" aria-pressed="false" type="submit" onclick="s_click()">Strength Training
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="weightAlert()" onclick="page_portal()">Register now!
+                    </button>
+                    <script type="text/javascript">
+                    var link = "";
+                    function c_click(){
+                        link = "cardio";
+                    }
+                    function s_click(){
+                        link = "strength";
+                    }
+                    function page_portal(){
+                        if (link=="cardio")
+                            location.href="cardio.html";
+                        else if (link=="strength")
+                            location.href="strength.html";
+                    
+                    }
+                    </script>
                 </form><!-- /form -->
             </div><!-- /card-container -->
         </div><!-- /container -->
     </div>
 </body>
 </html>
-
-
-user - userid, type (athlete or not)
-stats- statsid, userid, weight, height, goal, bmi, routine
-routine links to cardio or strength
