@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student Athlete's Profile</title>
+	<!-- <link rel="stylesheet" href="style.css"> --> 
+	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- <script src="jquery-1.12.4.min.js"></script> -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+	<img src="Kali.png" class="logo"/>
+	<div id="wrapper" vertical-align="middle" align="center">
+		<div class="bubble">
+			<div id="chatbot"> </div>
+		</div>
+	</div>
+	<div id="background" vertical-align="middle" align="center">
+		<button type="button" id="countButton" class="btn btn-success btn-cardio">Continue</button>
+		<button type="button" id="countButton" class="btn btn-success btn-cardio" onclick="back()">Back to Cherish's workouts</button>
+	</div>
+
+	<script type="text/javascript">
+		var workout = {0: "Hi, I'm Cherish Burks, welcome to my workout! Are you ready to begin?", 
+		1 : "Awesome, here is a rundown of today's workout: \nPower Clean (Sets: 5, Reps: 5) \nBarbell Squat (Sets: 4, Reps: 10,8,6,4) \nFront Squats (Sets: 4, Reps: 5) \nRomanian Deadlift (Sets: 3, Reps: 6) \nPullups (Sets: 4, Reps: 5) \nTwo-Point Dumbbell Row (Sets: 3, Reps: 10)", 
+		2 : "Let's start with Power Clean. Set a barbell on the floor, crouch down, and grab it with hands outside shoulder width. \nQuickly stand up and shrug the bar, coming up onto the balls of your feet. \nAs the bar rises to chest level, flip your wrists over so that your palms face the ceiling and your upper arms are parallel to the floor. \nAllow your knees to bend as you absorb the force of the bar at your shoulders.\n5 sets. 5 reps.",
+		3 : "You did amazing! Let's move onto Barbell Squats.",
+		4 : "Stand with your feet a bit wider than shoulder-width apart and your toes turned slightly outward. \nBend your hips back and then your knees (push them outward as you go down) to lower your body as far as you can. \n4 sets. 10/8/6/4 reps.",
+		5 : "Good job! You are doing great. Time for Front Squats.",
+		6 : "Start with the barbell on the supports of a power rack at about shoulder height. \nGrab the bar overhand and raise your elbows until your upper arms are parallel to the floor.\nNow lift the bar off the rack, letting it roll toward your fingers-as long as you keep your elbows raised, you will balance the bar. \nSquat as low as you can while keeping your lower back flat. \n4 sets. 5 reps.",
+		7 : "Look at you go! Let's keep it rolling with some Romanian Deadlifts.",
+		8 : "Hold the bar at arm's length and let it touch the front of your thighs. \nKeeping your lower back in its natural arch, bend your hips back and then your knees, \nlowering the weight until you feel you're about to lose the arch in your lower back. \n3 sets. 6 reps.",
+		9 : "Amazing! Only 2 more exercises to go. Are you ready for pullups?",
+		10 : "Sit at a power rack with your feet shoulder-width apart and grab the bar with a slightly wider-than-shoulder-width grip. Squeeze your shoulder blades together and push your chest out. \nPress the bar overhead and slightly backward so that it ends up in line with the back of your head at the top. \n4 sets. 5 reps.",
+		11 : "You are a beast! Last exercise, let's do this!",
+		12 : "Hold a dumbbell in one hand and step forward with the opposite leg. \nBend over at the hips until your torso is parallel to the floor (keep a safe arch in your lower back). \nBrace your abs. Row the weight to your side. \n3 sets. 6 reps.",
+		13 : "You are all done! You look stronger already. See you soon for another session together."};
+
+		var count = 0;
+		var button = document.getElementById("countButton");
+		document.getElementById("chatbot").innerHTML = "<h3>" + workout[0] + "</h3>";
+		button.onclick = function(){
+			count++;
+			if (count >= 13) {
+				document.getElementById("chatbot").innerHTML = "<h3> Congratulations! All done </h3?";
+				document.getElementById("chatbot").innerHTML = "<h3> </h3>";
+				return;
+			}
+			else {
+				next(workout, count);
+			}
+		}
+		function next (workout, count) {
+
+			document.getElementById("chatbot").innerHTML = "<h3>" + workout[count] + "</h3>";
+		}
+		function back(){
+                        location.href="workout.html";
+                    }
+			// var xmlhttp = new XMLHttpRequest();
+			// var url = "https://1cnsncaze3.execute-api.us-west-2.amazonaws.com/FINAL/getworkout";
+			// xmlhttp.open("GET", url, true);
+			// xmlhttp.send();
+	  //   //get object returned by API call
+	  //   //alert(workout);
+	  //   xmlhttp.onreadystatechange = function() {
+	  //   	if (this.readyState == 4 && this.status == 200) {
+	  //   		workout = JSON.parse(this.responseText);
+	  //   	}
+	  //   }
+
+	  //   alert(workout);
+
+	</script>
+
+
+</body>
+</html>
