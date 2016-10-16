@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student Athlete's Profile</title>
+	<!-- <link rel="stylesheet" href="style.css"> --> 
+	<!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- <script src="jquery-1.12.4.min.js"></script> -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<script src="app.js"> </script>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" height="200px">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-1">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="studentProfile.html"><img src="Kali.png" class="logo"/></a>
+    </div>
+          </div><br><div class="col-md-4"><a class="navbar-brand" href="#" align="left" vertical-align="bottom">Train with your community's athletes</a></div>
+      <div class="col-md-6">
+            <form action="" class="search-form">
+                <div class="form-group has-feedback">
+            		<label for="search" class="sr-only">Search</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="search">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span><a href="index.html"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+                </div>
+            </form>
+        </div>
+      </div>
+  </div>
+</nav>
+<div ng-app="myApp" ng-controller="controller">
+    <div class="container">
+        <div class="card card-routine">
+				<div class="row">
+                    <div class="col-sm-3">
+                        <img class="img-student" src="https://s-media-cache-ak0.pinimg.com/236x/e3/7e/0e/e37e0e25686c2139b281a57a5b4906f2.jpg">
+					<h3 id="name" align="center">Me</h3>
+					<h4 align="center"><i>Senior</i></h4>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Favorite Trainers</div>
+                        <div class="panel-body">Cherish Burks</div>
+                        <div class="panel-body">Devon Allen</div>
+                        <div class="panel-body">Mar'Shay Moore</div>
+                        <div class="panel-body">Kacey Nady</div>
+                    </div>
+                    </div>
+                    <div class="col-sm-5"><br><br>
+                    <h3 align="left">Your Feed</h3>
+                    <h1 id="name_date">Workout History</h1>
+                    <div class="panel panel-primary">
+                        <div class="panel-body"><span id="name_date">10/14 &#9830; </span> Devin's Leg Day Workout</div>
+                        <div class="panel-body"><span id="name_date">10/12 &#9830; </span> Cherish's Fullbody Workout</div>
+                        <div class="panel-body"><span id="name_date">12/25 &#9830; </span> Cherish's "Lift"mas Workout</div>
+                        </div>
+                    <h1 id="name_date">Achievements</h1>
+                    <div class="panel panel-primary">
+                        <div class="panel-body"><span class="glyphicon glyphicon-certificate"></span> Worked out everyday for a week</div>
+                        <div class="panel-body"><span class="glyphicon glyphicon-certificate"></span> New Record!</div>
+                        <div class="panel-body"><span class="glyphicon glyphicon-certificate"></span> Completed 5 different athlete's workouts</div>
+                        <div class="panel-body"><span class="glyphicon glyphicon-certificate"></span> Completed 15 of Devin's workouts</div>
+                        <div class="panel-body"><span class="glyphicon glyphicon-certificate"></span> Completed 5 different athletes' workouts</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                    <h4>Updates</h4>
+                    <div class="panel panel-primary" id="updates">
+                        <div class="panel-body"><span id="name_date">Devon Allen &#9830; Oct 14</span><br>Come see me at the #QuackCon panel tonight! So cool!</div>
+                        <div class="panel-body"><span id="name_date">Mark Helfrich &#9830; Oct 10</span><br>Thanks to the fans this last Saturday. Ducks are the best!</div>
+                        <div class="panel-body"><span id="name_date">Devon Allen &#9830; Oct 8</span><br>Hate sitting on the sideline, but love supporting the fam. </div>
+                        <div class="panel-body"><span id="name_date">SCHEDULES &#9830; Oct 7</span><br>Get ready! Tomorrow is game day for the Oregon Ducks Football team. Game starts at 4:30pm PST</div>
+                        <div class="panel-body"><span id="name_date">Cherish Burks &#9830; Oct 14</span><br>I love my ducks! I love my ducks! I love my ducks! Sco ducks!!!</div>
+                    </div>
+            </div>
+            </div>
+				</div>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+</body>
+</html>
