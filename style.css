@@ -142,3 +142,16 @@ h4 {
 	display: block;
     margin-bottom: 10px;
 }
+.container {
+    display: table;
+    vertical-align: middle;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.background {
+    display: table-cell;
+    vertical-align: middle;
+}

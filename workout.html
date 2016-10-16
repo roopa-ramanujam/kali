@@ -2,7 +2,7 @@
 <html >
 <head>
 	<meta charset="UTF-8">
-	<title>Strength</title>
+	<title>Student Athlete's Profile</title>
 	<!-- <link rel="stylesheet" href="style.css"> --> 
 	<!-- Latest compiled and minified CSS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -25,34 +25,42 @@
   <img src='uo.jpg' style='width:100%;height:100%' alt='[]' />
 </div> -->
 <div ng-app="myApp" ng-controller="controller">
-    <img src="Kali.png" class="logo"/>
-    <div class="container">
-        <div class="card card-routine">
-            <h3 id="strength" align="center"> Strength </h3><br>
-               <div align="center">After analysing your data, here are your suggested trainers:
-               <br><br>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <a href="devonAllen.html">
-					<img class="img-routine" src="https://s-media-cache-ak0.pinimg.com/236x/e3/7e/0e/e37e0e25686c2139b281a57a5b4906f2.jpg">
-					<br>					
-					<h4>Devon Allen</h4>
-					Wide-Receiver, Football	
-                        </a>
-	                </div>
-				    <div class="col-sm-6">
-                        <a href="cherishBurks.html">
-					<img class="img-routine" src="https://s-media-cache-ak0.pinimg.com/236x/e3/7e/0e/e37e0e25686c2139b281a57a5b4906f2.jpg">
-	                <h4>Cherish Burks</h4>
-					Outfielder, Softball
-                        </a>
-	                </div>
-				</div>
-				</div>
-        </div><!-- /card-container -->
-    </div><!-- /container -->
-    
-    </div>
+	<img src="Kali.png" class="logo"/>
+	<div class="container">
+	<div class="vertical-center-row">
+		<div class="col-xs-4">
+			<img src="arms.png" style="width:300px;height:300px;">
+			<button type="button" class="btn btn-default" onclick="c_click()">Arm Workout</button>
+		</div>
+		<div class="col-xs-4">
+			<img src="full-body.png" style="width:300px;height:300px;">
+			<button type="button" class="btn btn-default" onclick="c_click()">Full Body Workout</button>
+		</div>
+		<div class="col-xs-4">
+			<img src="legs.png" style="width:300px;height:300px;">
+			<button type="button" class="btn btn-default" onclick="c_click()">Leg Workout</button>
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+			function c_click(){
+			location.href="chatbot.html";
+		}
+		var xmlhttp = new XMLHttpRequest();
+		var url = "https://1cnsncaze3.execute-api.us-west-2.amazonaws.com/FINAL/getworkout";
+
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		$scope.workout = {};
+
+    //get object returned by API call
+    xmlhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		$scope.workout = JSON.parse(this.responseText);
+    	}
+    };
+</script>
+</div><!-- /container -->
 
 </body>
 </html>
