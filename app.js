@@ -1,12 +1,13 @@
 var app = angular.module('myApp', []);
 
-app.controller('controller', function($scope) {
+app.controller('controller', ['$scope', '$http', function($scope, $http) {
     $scope.userName;
     $scope.password;
     $scope.athlete;
     $scope.weight;
     $scope.feet;
     $scope.inches;
+    $scope.height;
     $scope.preference;
     $scope.setPreference = function(preference) {
     	if (preference == "cardio") {
@@ -16,12 +17,28 @@ app.controller('controller', function($scope) {
     		$scope.preference = "strength";
     	}
     }
-    function handleBtnClick(event) {
-    event = event || window.event;
-    var pressed = event.target.getAttribute("aria-pressed") == "true";
-    //change the aria-pressed value as the button is toggled:
-    event.target.setAttribute("aria-pressed", pressed ? "false" : "true");
-    //... (perform the button's logic here)
-  }
 
-});
+var obj = {
+	"username" : $scope.userName,
+	"type" : $scope.athlete,
+	"weight" : $scope.weight,
+	"goal" : $scope.goal,
+	"height": $scope.height,
+	"focus" : $scope.preference
+}
+}]);
+
+        var xmlhttp = new XMLHttpRequest();
+        var url = " https://1cnsncaze3.execute-api.us-west-2.amazonaws.com/FINAL/gettrainer";
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        var obj = {};
+
+        //get object returned by API call
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                obj = this.responseText;
+                alert(obj);
+            }
+        };
