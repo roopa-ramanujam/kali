@@ -48,12 +48,21 @@
 
 		var count = 0;
 		var button = document.getElementById("countButton");
+<<<<<<< HEAD
+		document.getElementById("chatbot").innerHTML = "<h1>" + workout[0] + "</h1>";
+		button.onclick = function(){
+			count++;
+			if (count >= 13) {
+				document.getElementById("chatbot").innerHTML = "<h1> Congratulations! All done </h1>";
+				document.getElementById("chatbot").innerHTML = "<h1></h1>";
+=======
 		document.getElementById("chatbot").innerHTML = "<h3>" + workout[0] + "</h3>";
 		button.onclick = function(){
 			count++;
 			if (count >= 13) {
 				document.getElementById("chatbot").innerHTML = "<h3> Congratulations! All done </h3?";
 				document.getElementById("chatbot").innerHTML = "<h3> </h3>";
+>>>>>>> d62acec32aa071be64a92eee6199d4337340b698
 				return;
 			}
 			else {
@@ -61,11 +70,16 @@
 			}
 		}
 		function next (workout, count) {
+<<<<<<< HEAD
+			document.getElementById("chatbot").innerHTML = "<h1>" + workout[count] + "</h1>";
+		}
+=======
 			document.getElementById("chatbot").innerHTML = "<h3>" + workout[count] + "</h3>";
 		}
 		function back(){
                         location.href="workout.html";
                     }
+>>>>>>> d62acec32aa071be64a92eee6199d4337340b698
 			// var xmlhttp = new XMLHttpRequest();
 			// var url = "https://1cnsncaze3.execute-api.us-west-2.amazonaws.com/FINAL/getworkout";
 			// xmlhttp.open("GET", url, true);
@@ -80,8 +94,11 @@
 
 	  //   alert(workout);
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> d62acec32aa071be64a92eee6199d4337340b698
 	</script>
 
 
